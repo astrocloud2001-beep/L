@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy 1 Month Anniversary ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+background:#FFD1DC;
+font-family:'Poppins',sans-serif;
+text-align:center;
+color:white;
+overflow:hidden;
+}
+
+.container{
+margin-top:80px;
+position:relative;
+z-index:2;
+}
+
+h1{
+font-size:45px;
+font-family:'Great Vibes',cursive;
+}
+
+h2{
+font-size:35px;
+color:#ff2e63;
+text-shadow:0 0 10px white,0 0 20px white;
+}
+
+p{
+font-size:20px;
+width:70%;
+margin:auto;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:20px;
+background:white;
+color:#ff4b6e;
+cursor:pointer;
+margin-top:30px;
+}
+
+.hidden{
+display:none;
+margin-top:20px;
+font-size:22px;
+}
+
+/* falling animation */
+
+@keyframes fall{
+to{
+transform:translateY(100vh);
+opacity:0;
+}
+}
+
+.fall{
+position:fixed;
+top:-20px;
+animation:fall linear;
+z-index:1;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>Happy 1 Monthh Anniversaryy 💕</h1>
+
+<h2>Kushu 💝 Tanu</h2>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Rose_flower.jpg/320px-Rose_flower.jpg" width="200">
+
+<p>
+its alrewdsyy 1 monthhhhh. and so much more to goo....
+i lovee u so muchhhh.... 💖
+</p>
+
+<button onclick="showMessage(); playMusic()">Click this if you miss me 💌</button>
+
+<div class="hidden" id="message">
+
+kushhuuuuu.... i know its only been 1 month still we have seen fights and cries 💕  
+but one thing is sure we are not gonna leave each other 🧿  
+i can see our potential... what we are and what we can become 😘  
+even if times are hard right now i'm always with you 🫂💕
+
+</div>
+
+<p style="margin-top:40px">
+yourssss,<br>
+<b>Tanu 🤭😘</b>
+</p>
+
+</div>
+
+<script>
+
+function showMessage(){
+document.getElementById("message").style.display="block";
+}
+
+function playMusic(){
+const music=document.getElementById("bgMusic");
+music.play();
+}
+
+/* falling love letters & tulips */
+
+function createFall(){
+
+const item=document.createElement("div");
+
+item.innerHTML=Math.random()>0.5 ? "💌":"🌷";
+
+item.classList.add("fall");
+
+item.style.left=Math.random()*window.innerWidth+"px";
+
+item.style.fontSize=(20+Math.random()*30)+"px";
+
+item.style.animationDuration=(4+Math.random()*4)+"s";
+
+document.body.appendChild(item);
+
+setTimeout(()=>{
+item.remove();
+},8000);
+
+}
+
+setInterval(createFall,300);
+
+</script>
+
+</body>
+</html>
